@@ -68,6 +68,7 @@
         <h2>Печатные платы</h2>
         <p>Производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
         <a href="#feedback" class="button banner__button">Получить бесплатную консультацию</a>
+        <a href="#feedback" class="button banner__button banner__button--mobile">Бесплатная консультация</a>
       </section>
 
       <section class="advantages">
@@ -224,7 +225,7 @@
           </div>
           <div id="textarea" class="feedback__textarea">
             <label class="visually-hidden" for="question">Напишите ваш вопрос</label>
-            <textarea id="question" name="comment" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
+            <textarea id="question" name="comment" cols="20" rows="7" placeholder="Ваш вопрос"></textarea>
           </div>
           <button class="button feedback__button" type="submit">Задать вопрос</button>
           <div class="feedback__input-checkbox">
@@ -239,78 +240,95 @@
 
     </main>
     <footer class="page-footer">
-      <a>
-        <picture>
-          <source media="(max-width: 769px)" srcset="img/svg/logo-mob.svg">
-          <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип">
-        </picture>
-      </a>
-      <div class="page-footer__social-wrapper">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/htmlacademy">
-              <span class="visually-hidden">Мы в Фейсбуке</span>
-              <svg width="30" height="30">
-                <use xlink:href="img/svg/sprite.svg#fb"></use>
-              </svg>
+      <div class="page-footer__wrapper container">
+        <div class="page-footer__logo-social">
+          <div class="page-footer__logo">
+            <a>
+              <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип">
             </a>
-          </li>
-          <li>
-            <a href="https://www.ok.com/htmlacademy">
-              <span class="visually-hidden">Мы в Одноклассниках</span>
-              <svg width="30" height="30">
-                <use xlink:href="img/svg/sprite.svg#ok"></use>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a href="https://vk.com/htmlacademy">
-              <span class="visually-hidden">Мы во Вконтакте</span>
-              <svg width="30" height="30">
-                <use xlink:href="img/svg/sprite.svg#vk"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+          </div>
+          <div class="page-footer__social-wrapper">
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/htmlacademy">
+                  <span class="visually-hidden">Мы в Фейсбуке</span>
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite/sprite_auto.svg#fb"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.ok.com/htmlacademy">
+                  <span class="visually-hidden">Мы в Одноклассниках</span>
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite/sprite_auto.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://vk.com/htmlacademy">
+                  <span class="visually-hidden">Мы во Вконтакте</span>
+                  <svg width="30" height="30">
+                    <use xlink:href="img/sprite/sprite_auto.svg#vk"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="page-footer__nav accordion">
+          <div class="page-footer__nav-header">
+            <h3>Разделы сайта</h3>
+            <button class="accordion__toggle accordion__toggle--nojs"><span class="visually-hidden">Показать/Скрыть Разделы
+                сайта</span></button>
+          </div>
+          <div class="page-footer__nav-wrapper">
+
+              <ul class="accordion__content accordion__content--nojs">
+                <li>
+                  <a href="#">О Компаниии</a>
+                </li>
+                <li>
+                  <a href="#">Продукты</a>
+                </li>
+                <li>
+                  <a href="#">Протзводство печатных плат</a>
+                </li>
+                <li>
+                  <a href="#">Монтаж печатных плат</a>
+                </li>
+              </ul>
+
+              <ul class="accordion__content accordion__content--nojs">
+                <li>
+                  <a href="#">Комплектующие</a>
+                </li>
+                <li>
+                  <a href="#">Доставка</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+              </ul>
+
+          </div>
+        </section>
+
+        <section class="page-footer__address address accordion">
+          <div class="page-footer__address-header">
+            <h3>Наш офис</h3>
+            <button class="accordion__toggle accordion__toggle--nojs"><span class="visually-hidden">Показать/Скрыть
+                Адрес</span></button>
+          </div>
+          <address class="accordion__content accordion__content--nojs">
+            <p>г. Мытищи, Олимпийский проспект, д.10</p>
+            <a href="tel:84955894050">+7 (495) 589-40-50</a>
+            <a href="tel:89253895829">+7 (925) 389-58-29</a>
+            <a href="tel:89253647813">+7 (925) 364-78-13</a>
+          </address>
+        </section>
       </div>
-
-      <section class="sections-site">
-        <h3>Разделы сайта</h3>
-        <ul>
-          <li>
-            <a href="#">О Компаниии</a>
-          </li>
-          <li>
-            <a href="#">Продукты</a>
-          </li>
-          <li>
-            <a href="#">Протзводство печатных плат</a>
-          </li>
-          <li>
-            <a href="#">Монтаж печатных плат</a>
-          </li>
-          <li>
-            <a href="#">Комплектующие</a>
-          </li>
-          <li>
-            <a href="#">Доставка</a>
-          </li>
-          <li>
-            <a href="#">Контакты</a>
-          </li>
-        </ul>
-      </section>
-
-      <section class="page-footer__address">
-        <h3>Наш офис</h3>
-        <address>
-          <span>г. Мытищи, Олимпийский проспект, д.10</span>
-          <a href="tel:84955894050">+7 (495) 589-40-50</a>
-          <a href="tel:89253895829">+7 (925) 389-58-29</a>
-          <a href="tel:89253647813">+7 (925) 364-78-13</a>
-        </address>
-      </section>
-
     </footer>
   </div>
 
@@ -343,8 +361,8 @@
     </div>
   </div>
 
-  <script src="js/vendor.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/vendor.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
