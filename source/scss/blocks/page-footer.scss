@@ -1,0 +1,264 @@
+.page-footer {
+  padding-top: 50px;
+  padding-bottom: 55px;
+  background-color: $color-black-pearl;
+
+  @include vp-769 {
+    padding-top: 35px;
+  }
+}
+
+.page-footer__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  // display: flex;
+  // justify-content: space-between;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    // grid-template-rows: 1fr 2fr;
+    grid-template-areas:
+    "l l"
+    "n a";
+  }
+
+  @include vp-769 {
+    grid-template-areas:
+    "l"
+    "n"
+    "a";
+  }
+}
+
+.page-footer__logo-social {
+  @include vp-1023 {
+    display: flex;
+    justify-content: space-between;
+    grid-area: l;
+  }
+
+  @include vp-769 {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 30px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: $color-alice-blue2;
+      opacity: 0.7;
+    }
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 35px;
+  width: 215px;
+  height: 55px;
+
+  @include vp-1023 {
+    margin-bottom: 30px;
+  }
+
+  @include vp-769 {
+    margin-bottom: 10px;
+  }
+}
+
+.page-footer__social-wrapper ul {
+  margin: 0;
+  margin-left: 15px;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  list-style: none;
+
+  @include vp-1023 {
+    margin-top: 10px;
+    margin-right: 13px;
+  }
+}
+
+.page-footer__social-wrapper a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  vertical-align: top;
+}
+
+.page-footer__social-wrapper a:hover,
+.page-footer__social-wrapper a:focus {
+  fill-opacity: 0.7;
+}
+
+.page-footer__nav {
+  width: 470px;
+
+  @include vp-1023 {
+    width: 220px;
+    grid-area: n;
+  }
+
+  @include vp-769 {
+    position: relative;
+    margin-bottom: 15px;
+    width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -25px;
+      bottom: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: $color-alice-blue2;
+      opacity: 0.7;
+    }
+  }
+}
+
+.page-footer__nav-header,
+.page-footer__address-header {
+  @include vp-769 {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__nav h3 {
+  margin: 0;
+  margin-top: 7px;
+  margin-bottom: 23px;
+  font-family: $ff-roboto-condensed;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+  color: $color-default-white;
+  text-transform: uppercase;
+}
+
+// .page-footer__nav ul {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: space-between;
+//   margin: 0;
+//   padding: 0;
+//   list-style: none;
+
+//   @include vp-770 {
+//     justify-content: start;
+//   }
+// }
+
+.page-footer__nav-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include vp-1023 {
+    justify-content: start;
+  }
+}
+
+.page-footer__nav-wrapper ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-footer__nav-wrapper li {
+  margin-bottom: 9px;
+  margin-right: 11px;
+  width: 210px;
+}
+
+.page-footer__nav-wrapper a {
+  color: $color-default-white;
+  opacity: 0.7;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}
+
+.page-footer__address {
+  margin-left: auto;
+  max-width: 345px;
+
+  @include vp-1023 {
+    padding-left: 12px;
+    grid-area: a;
+  }
+
+  @include vp-769 {
+    position: relative;
+    margin-left: 0;
+    padding-left: 0;
+    padding-bottom: 8px;
+    max-width: 100%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -25px;
+      bottom: 0;
+      width: 100vw;
+      height: 1px;
+      background-color: $color-alice-blue2;
+      opacity: 0.7;
+    }
+  }
+}
+
+.page-footer__address h3 {
+  margin: 0;
+  margin-top: 7px;
+  margin-bottom: 23px;
+  font-family: $ff-roboto-condensed;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.7px;
+  color: $color-default-white;
+  text-transform: uppercase;
+
+  @include vp-769 {
+    margin-bottom: 17px;
+  }
+}
+
+.page-footer__address p,
+.page-footer__address a {
+  margin-bottom: 9px;
+  font-style: normal;
+  color: $color-default-white;
+  opacity: 0.7;
+
+  @include vp-769 {
+    font-size: 14px;
+  }
+}
+
+.page-footer__address p {
+  @include vp-769 {
+    margin-bottom: 20px;
+    line-height: 18px;
+  }
+}
+
+.page-footer__address a {
+  display: block;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+}

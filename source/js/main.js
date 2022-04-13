@@ -1,5 +1,5 @@
-import {iosVhFix} from './utils/ios-vh-fix';
-import {initModals} from './modules/modals/init-modals';
+// import {iosVhFix} from './utils/ios-vh-fix';
+// import {initModals} from './modules/modals/init-modals';
 
 // ---------------------------------
 
@@ -8,15 +8,57 @@ window.addEventListener('DOMContentLoaded', () => {
   // Utils
   // ---------------------------------
 
-  iosVhFix();
+  // iosVhFix();
 
   // Modules
   // ---------------------------------
 
+  const accordions = document.querySelectorAll('.accordion');
+  const accordionToggle = document.querySelectorAll('.accordion__toggle');
+  const accordionContents = document.querySelectorAll('.accordion__content');
+
+  const toggles = Array.from(accordionToggle);
+  toggles.forEach((el) => {
+    el.classList.remove('accordion__toggle--nojs');
+  });
+
+  const contents = Array.from(accordionContents);
+  contents.forEach((el) => {
+    el.classList.remove('accordion__content--nojs');
+  });
+
+  const hiddenContent = (button, content) => {
+    button.classList.remove('accordion__toggle--active');
+    content.classList.remove('accordion__content--show');
+  }
+
+  const showContent = (button, content) => {
+    button.classList.add('accordion__toggle--active');
+    content.classList.add('accordion__content--show');
+  };
+
+  const toggleAccordion = (evt) => {
+    Array.prototype.forEach.call(accordionContents, function (accordionContent) {
+      let button = accordionContent.closest('.accordion').querySelector('.accordion__toggle');
+      if (button === evt.target && !button.classList.contains('accordion__toggle') || button !== evt.target) {
+        hiddenContent(button, accordionContent);
+      } else if (button === evt.target) {
+        showContent(button, accordionContent);
+      }
+    });
+  };
+
+  Array.prototype.forEach.call(accordions, function (accordion) {
+    let toggleButton = accordion.querySelector('.accordion__toggle');
+    let accordionContent = accordion.querySelector('.accordion__content');
+    hiddenContent(toggleButton, accordionContent);
+    toggleButton.addEventListener('click', toggleAccordion);
+  });
+
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
-    initModals();
+    // initModals();
   });
 });
 
