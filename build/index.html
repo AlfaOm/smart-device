@@ -20,36 +20,54 @@
 <body>
   <div class="wrapper">
     <header class="page-header">
-      <a>
-        <picture>
-          <source media="(max-width: 769px)" srcset="img/svg/logo-mob.svg">
-          <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип">
-        </picture>
-      </a>
+      <div class="page-header__wrapper container">
+        <h1 class="visually-hidden">Smart Device - Умные технологии</h1>
+        <div class="page-header__logo">
+          <a>
+            <picture>
+              <source media="(max-width: 769px)" srcset="img/svg/logo-mob.svg">
+              <img src="img/svg/logo.svg" width="215" height="55" alt="Логотип">
+            </picture>
+          </a>
+        </div>
 
-      <div class="page-header__email">
-        <svg width="20" height="20">
-          <use xlink:href="img/svg/sprite.svg#email"></use>
-        </svg>
-        <a href="mailto:info@sd.ru">info@sd.ru</a>
+        <div class="page-header__contact">
+          <div class="page-header__email">
+            <!-- <svg width="21" height="20">
+              <use xlink:href="img/sprite/sprite_auto.svg#email"></use>
+            </svg>
+            <a href="mailto:info@sd.ru">info@sd.ru</a> -->
+            <a href="mailto:info@sd.ru">
+              <svg width="21" height="20">
+                <use xlink:href="img/sprite/sprite_auto.svg#email"></use>
+              </svg>
+              <p>info@sd.ru</p>
+            </a>
+          </div>
+
+          <div class="page-header__phone">
+            <!-- <svg width="21" height="20">
+              <use xlink:href="img/sprite/sprite_auto.svg#phone"></use>
+            </svg>
+            <a href="tel:84950005252">+7 (495) 000 52 52</a> -->
+            <a href="tel:84950005252">
+              <svg width="21" height="20">
+                <use xlink:href="img/sprite/sprite_auto.svg#phone"></use>
+              </svg>
+              <p>+7 (495) 000 52 52</p>
+            </a>
+          </div>
+        </div>
+
+        <a href="#" class="button page-header__button" data-open-modal="feedback">Заказать звонок</a>
       </div>
-
-      <div class="page-header__phone">
-        <svg width="20" height="20">
-          <use xlink:href="img/svg/sprite.svg#phone"></use>
-        </svg>
-        <a href="tel:84950005252">+7 (495) 000 52 52</a>
-      </div>
-
-      <button class="button page-header__button" type="button">Заказать звонок</button>
-
     </header>
     <main>
 
       <section class="banner">
-        <h1>Печатные платы</h1>
+        <h2>Печатные платы</h2>
         <p>Производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-        <button href="#feedback" class="button banner__button">Получить бесплатную консультацию</button>
+        <a href="#feedback" class="button banner__button">Получить бесплатную консультацию</a>
       </section>
 
       <section class="advantages">
@@ -145,49 +163,49 @@
           <li>
             <a href="#">
               <h3>Монтаж печатных плат</h3>
-
-              <!-- 1x: 270px; 2x: 540px -->
-              <source media="(max-width: 769px)" srcset="img/service-2-mob.webp 1x, img/service-2-mob@2x.webp 2x"
-                type="image/webp">
-              <source media="(max-width: 769px)" srcset="img/service-2-mob.jpg 1x, img/service-2-mob@2x.jpg 2x">
-              <!-- 1x: 670px; 2x: 1340px; -->
-              <source media="(max-width: 1023px)" srcset="img/service-2-tab.webp 1x, img/service-2-tab@2x.webp 2x"
-                type="image/webp">
-              <source media="(max-width: 1023px)" srcset="img/service-2-tab.jpg 1x, img/service-2-tab@2x.jpg 2x">
-              <!-- 1x: 350px; 2x: 700px; -->
-              <source media="(min-width: 1024px)" srcset="img/service-2.webp 1x, img/service-2@2x.webp 2x"
-                type="image/webp">
-              <img src="img/service-2.jpg" srcset="img/service-2@2x.jpg 2x" width="350" height="650"
-                alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
-
+              <picture>
+                <!-- 1x: 270px; 2x: 540px -->
+                <source media="(max-width: 769px)" srcset="img/service-2-mob.webp 1x, img/service-2-mob@2x.webp 2x"
+                  type="image/webp">
+                <source media="(max-width: 769px)" srcset="img/service-2-mob.jpg 1x, img/service-2-mob@2x.jpg 2x">
+                <!-- 1x: 670px; 2x: 1340px; -->
+                <source media="(max-width: 1023px)" srcset="img/service-2-tab.webp 1x, img/service-2-tab@2x.webp 2x"
+                  type="image/webp">
+                <source media="(max-width: 1023px)" srcset="img/service-2-tab.jpg 1x, img/service-2-tab@2x.jpg 2x">
+                <!-- 1x: 350px; 2x: 700px; -->
+                <source media="(min-width: 1024px)" srcset="img/service-2.webp 1x, img/service-2@2x.webp 2x"
+                  type="image/webp">
+                <img src="img/service-2.jpg" srcset="img/service-2@2x.jpg 2x" width="350" height="650"
+                  alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
+              </picture>
             </a>
             <button type="button"></button>
           </li>
           <li>
             <a href="#">
               <h3>Комплектующие для светотехники</h3>
-
-              <!-- 1x: 270px; 2x: 540px -->
-              <source media="(max-width: 769px)" srcset="img/service-3-mob.webp 1x, img/service-3-mob@2x.webp 2x"
-                type="image/webp">
-              <source media="(max-width: 769px)" srcset="img/service-3-mob.jpg 1x, img/service-3-mob@2x.jpg 2x">
-              <!-- 1x: 670px; 2x: 1340px; -->
-              <source media="(max-width: 1023px)" srcset="img/service-3-tab.webp 1x, img/service-3-tab@2x.webp 2x"
-                type="image/webp">
-              <source media="(max-width: 1023px)" srcset="img/service-3-tab.jpg 1x, img/service-3-tab@2x.jpg 2x">
-              <!-- 1x: 350px; 2x: 700px; -->
-              <source media="(min-width: 1024px)" srcset="img/service-3.webp 1x, img/service-3@2x.webp 2x"
-                type="image/webp">
-              <img src="img/service-3.jpg" srcset="img/service-3@2x.jpg 2x" width="350" height="650"
-                alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
-
+              <picture>
+                <!-- 1x: 270px; 2x: 540px -->
+                <source media="(max-width: 769px)" srcset="img/service-3-mob.webp 1x, img/service-3-mob@2x.webp 2x"
+                  type="image/webp">
+                <source media="(max-width: 769px)" srcset="img/service-3-mob.jpg 1x, img/service-3-mob@2x.jpg 2x">
+                <!-- 1x: 670px; 2x: 1340px; -->
+                <source media="(max-width: 1023px)" srcset="img/service-3-tab.webp 1x, img/service-3-tab@2x.webp 2x"
+                  type="image/webp">
+                <source media="(max-width: 1023px)" srcset="img/service-3-tab.jpg 1x, img/service-3-tab@2x.jpg 2x">
+                <!-- 1x: 350px; 2x: 700px; -->
+                <source media="(min-width: 1024px)" srcset="img/service-3.webp 1x, img/service-3@2x.webp 2x"
+                  type="image/webp">
+                <img src="img/service-3.jpg" srcset="img/service-3@2x.jpg 2x" width="350" height="650"
+                  alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
+              </picture>
             </a>
             <button type="button"></button>
           </li>
         </ol>
       </section>
 
-      <section class="feedback">
+      <section id="feedback" class="feedback">
         <h2 class="visually-hidden">Обратная связь</h2>
 
         <img src="img/airplane.png" srcset="img/airplane@2x.png" width="510" height="285"
@@ -206,7 +224,7 @@
           </div>
           <div id="textarea" class="feedback__textarea">
             <label class="visually-hidden" for="question">Напишите ваш вопрос</label>
-            <textarea id="question" name="comment" cols="41" rows="7" placeholder="Ваш вопрос"></textarea>
+            <textarea id="question" name="comment" cols="30" rows="7" placeholder="Ваш вопрос"></textarea>
           </div>
           <button class="button feedback__button" type="submit">Задать вопрос</button>
           <div class="feedback__input-checkbox">
@@ -216,8 +234,8 @@
         </form>
       </section>
 
-      <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback</a></p>
-      <p><a class="btn" href="#" data-open-modal="success">modal--success</a></p>
+      <p><a class="button" href="#" data-open-modal="feedback">modal--feedback</a></p>
+      <p><a class="button" href="#" data-open-modal="success">modal--success</a></p>
 
     </main>
     <footer class="page-footer">
