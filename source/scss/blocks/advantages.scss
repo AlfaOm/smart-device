@@ -1,14 +1,21 @@
 .advantages {
   padding-top: 120px;
-  padding-bottom: 120px;
+  padding-bottom: 60px;
   background-color: $color-alice-blue2;
+
+  // @media (max-width: 1270px) {
+  //   padding-right: 50px;
+  //   padding-left: 50px;
+  // }
 
   @include vp-1023 {
     padding-top: 80px;
+    padding-bottom: 40px;
   }
 
   @include vp-769 {
     padding-top: 50px;
+    padding-bottom: 25px;
   }
 }
 

@@ -13,6 +13,9 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
+
+  // Аккордеон в футере
+
   const accordions = document.querySelectorAll('.accordion');
   const accordionToggle = document.querySelectorAll('.accordion__toggle');
   const accordionContents = document.querySelectorAll('.accordion__content');
@@ -54,6 +57,37 @@ window.addEventListener('DOMContentLoaded', () => {
     hiddenContent(toggleButton, accordionContent);
     toggleButton.addEventListener('click', toggleAccordion);
   });
+
+
+  // Показать/скрыть текст блока "О компании"
+
+  const textHiddenDesk = document.querySelector('.about__text-desk');
+  const textHiddenMob = document.querySelector('.about__text-mob');
+  const aboutButton = document.querySelector('.about__button');
+
+  textHiddenDesk.classList.remove('about__text-desk--nojs');
+  textHiddenMob.classList.remove('about__text-mob--nojs');
+
+  const readMore = () => {
+    if (textHiddenDesk.classList.contains('about__text-desk--hidden')) {
+      textHiddenDesk.classList.remove('about__text-desk--hidden');
+      aboutButton.innerHTML = "Скрыть";
+    } else {
+      textHiddenDesk.classList.add('about__text-desk--hidden');
+      aboutButton.innerHTML = "Подробнее";
+    }
+
+    if (textHiddenMob.classList.contains('about__text-mob--hidden')) {
+      textHiddenMob.classList.remove('about__text-mob--hidden');
+      aboutButton.innerHTML = "Скрыть";
+    } else {
+      textHiddenMob.classList.add('about__text-mob--hidden');
+      aboutButton.innerHTML = "Подробнее";
+    }
+  }
+
+  aboutButton.addEventListener('click', readMore)
+
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
