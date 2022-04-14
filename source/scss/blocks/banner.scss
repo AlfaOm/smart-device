@@ -1,0 +1,125 @@
+.banner {
+  padding-top: 304px;
+  padding-bottom: 296px;
+  // padding-left: 125px;
+  background-color: $color-bg-black-perl;
+  background-image: url("../img/background/bg-banner-desk.png");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/background/bg-banner-desk@2x.png");
+    background-position: center top;
+    background-size: cover;
+  }
+
+  @include vp-1023 {
+    padding-top: 179px;
+    padding-bottom: 221px;
+    background-image: url("../img/background/bg-banner-tab.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/background/bg-banner-tab@2x.png");
+      background-position: center top;
+      background-size: cover;
+    }
+  }
+
+  @include vp-769 {
+    padding-top: 151px;
+    padding-bottom: 189px;
+    background-image: url("../img/background/bg-banner-mob.png");
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/background/bg-banner-mob@2x.png");
+      background-position: center top;
+      background-size: cover;
+    }
+  }
+}
+
+.banner h2 {
+  margin: 0;
+  margin-bottom: 32px;
+  padding-left: 125px;
+  font-family: $ff-roboto-condensed;
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 94px;
+  letter-spacing: 0.07em;
+  color: $color-alice-blue;
+  text-transform: uppercase;
+
+  @include vp-1023 {
+    margin-bottom: 0;
+    padding-left: 0;
+    font-size: 64px;
+    line-height: 75px;
+  }
+
+  @include vp-769 {
+    margin-bottom: 7px;
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+.banner p {
+  margin: 0;
+  margin-bottom: 65px;
+  padding-left: 125px;
+  max-width: 733px;
+  font-size: 22px;
+  line-height: 34px;
+  color: $color-alice-blue;
+  text-transform: lowercase;
+
+  @include vp-1023 {
+    margin-bottom: 76px;
+    padding-left: 0;
+  }
+
+  @include vp-769 {
+    margin-bottom: 47px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+}
+
+.banner__button {
+  padding: 17px 27px;
+  margin-left: 125px;
+  background-color: $color-deep-sky-blue;
+  font-size: 18px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: $color-alice-blue;
+
+  &--mobile {
+    display: none;
+  }
+
+  @include vp-1023 {
+    margin-left: 45px;
+  }
+
+  @include vp-769 {
+    display: none;
+
+    &--mobile {
+      display: block;
+      margin-left: 0;
+      padding: 12px 30px;
+      max-width: 451px;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
