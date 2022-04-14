@@ -1,3 +1,122 @@
 .about {
+  padding-top: 60px;
+  padding-bottom: 100px;
   background-color: $color-alice-blue2;
+
+  // @media (max-width: 1270px) {
+  //   padding-right: 50px;
+  //   padding-left: 50px;
+  // }
+
+  @include vp-1023 {
+    padding-top: 35px;
+    padding-bottom: 80px;
+  }
+
+  @include vp-769 {
+    padding-top: 22px;
+  }
+}
+
+.about__wrapper {
+  display: flex;
+}
+
+.about__year {
+  padding-right: 250px;
+  display: block;
+  width: 150px;
+  height: 320px;
+  background-image: url(../img/date.png);
+  background-repeat: no-repeat;
+
+  @include vp-1023 {
+    margin-top: 4px;
+    margin-left: -4px;
+    padding-right: 179px;
+  }
+
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.about h2 {
+  margin: 0;
+  margin-bottom: 15px;
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
+  color: $color-black-pearl;
+
+  @include vp-769 {
+    margin-bottom: 13px;
+    font-size: 28px;
+    line-height: 39px;
+  }
+}
+
+.about p {
+  margin: 0;
+  margin-bottom: 23px;
+
+  @include vp-769 {
+    margin-bottom: 17px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.about__text-desk {
+
+  &--hidden {
+    display: none;
+  }
+
+  &--nojs {
+    display: block;
+  }
+}
+
+.about__text-mob {
+  &--hidden {
+    @include vp-769 {
+      display: none;
+    }
+  }
+
+  &--nojs {
+    @include vp-769 {
+      display: block;
+    }
+  }
+}
+
+.about__button {
+  margin-top: 18px;
+  padding: 14px 12px;
+  min-width: 180px;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $color-deep-sky-blue;
+  border: 1px solid $color-deep-sky-blue;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    color: $color-alice-blue2;
+    background-color: $color-deep-sky-blue;
+  }
+
+  @include vp-1023 {
+    margin-top: -3px;
+  }
+
+  @include vp-769 {
+    padding-top: 8px;
+    padding-bottom: 9px;
+    min-width: 160px;
+  }
 }
