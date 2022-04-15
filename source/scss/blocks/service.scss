@@ -1,9 +1,171 @@
 .service {
-  background-color: #fff;
+  padding-top: 66px;
+  padding-right: 50px;
+  padding-bottom: 140px;
+  padding-left: 50px;
+  background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    padding-top: 55px;
+    padding-bottom: 75px;
+  }
+
+  @include vp-769 {
+    padding-top: 46px;
+    padding-right: 0px;
+    padding-bottom: 86px;
+    padding-left: 0px;
+  }
+}
+
+.service h2 {
+  margin: 0;
+  margin-bottom: 53px;
+  max-width: 100%;
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 50px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 39px;
+  }
+
+  @include vp-769 {
+    margin-bottom: 28px;
+    // max-width: 262px;
+    max-width: 344px;
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  @include vp-320 {
+    max-width: 262px;
+  }
+}
+
+.service__heading-desk {
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.service__heading-mob {
+  display: none;
+
+  @include vp-769 {
+    display: block;
+  }
 }
 
 .service ol {
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 85px;
   list-style: none;
+
+  @include vp-1023 {
+    gap: 30px;
+  }
+}
+
+.service li {
+  position: relative;
+
+  &:hover h3,
+  &:focus-within h3 {
+    color: $color-deep-sky-blue;
+  }
+
+  &:hover img,
+  &:focus-within img,
+  &:hover button,
+  &:focus-within button {
+    opacity: 0.5;
+  }
+}
+
+.service h3 {
+  position: absolute;
+  margin: 0;
+  padding-top: 50px;
+  padding-left: 40px;
+  width: 191px;
+  font-family: $ff-roboto-condensed;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    padding-top: 37px;
+    padding-left: 45px;
+    width: 193px;
+  }
+
+  @include vp-769 {
+    padding-top: 26px;
+    padding-left: 30px;
+    width: 165px;
+    font-size: 18px;
+  }
+}
+
+.service img {
+  width: 350px;
+  height: 650px;
+  object-fit: cover;
+
+  @include vp-1023 {
+    width: 670px;
+    height: 250px;
+  }
+
+  @include vp-769 {
+    // width: 270px;
+    height: 250px;
+  }
+}
+
+.service__button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 60px;
+  height: 60px;
+  background-color: $color-deep-sky-blue;
+  border: none;
+  border-top-left-radius: 3px;
+  cursor: pointer;
+
+  @include vp-769 {
+    width: 40px;
+    height: 40px;
+  }
+
+  // &:hover,
+  // &:focus {
+  //   opacity: 0.6;
+  // }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 27px;
+    width: 5px;
+    height: 10px;
+    background-image: url("../img/svg/arrow.svg");
+    background-repeat: no-repeat;
+
+    @include vp-769 {
+      top: 17px;
+      width: 5px;
+      height: 8px;
+      background-image: url("../img/svg/arrow-small.svg");
+    }
+  }
 }

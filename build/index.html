@@ -77,7 +77,7 @@
         <h2 class="visually-hidden">Преимущества</h2>
         <div class="container">
           <ul>
-            <li>
+            <li tabindex="0">
               <div class="advantages__item advantages__item--first">
                 <svg width="35" height="35">
                   <use xlink:href="img/sprite/sprite_auto.svg#stopwatch"></use>
@@ -87,7 +87,7 @@
                   и&nbsp;доставлять заказы плат&nbsp;и комплектующих в&nbsp;самые короткие сроки</p>
               </div>
             </li>
-            <li>
+            <li tabindex="0">
               <div class="advantages__item advantages__item--second">
                 <svg width="35" height="35">
                   <use xlink:href="img/sprite/sprite_auto.svg#hired"></use>
@@ -99,7 +99,7 @@
                 </p>
               </div>
             </li>
-            <li>
+            <li tabindex="0">
               <div class="advantages__item advantages__item--third">
                 <svg width="35" height="35">
                   <use xlink:href="img/sprite/sprite_auto.svg#detective"></use>
@@ -108,7 +108,7 @@
                 <p>По&nbsp;желанию клиента &ensp;мы обеспечиваем полную конфеденциальность.</p>
               </div>
             </li>
-            <li>
+            <li tabindex="0">
               <div class="advantages__item advantages__item--fourth">
                 <svg width="35" height="35">
                   <use xlink:href="img/sprite/sprite_auto.svg#tag"></use>
@@ -157,7 +157,8 @@
       </section>
 
       <section class="service">
-        <h2>Smart Device предлагает следующие товары и&nbsp;услуги</h2>
+        <div class="container">
+        <h2><span class="service__heading-desk">Smart Device предлагает следующие товары и&nbsp;услуги</span><span class="service__heading-mob">Товары и&nbsp;услуги Smart Device</span></h2>
 
         <ol>
           <li>
@@ -179,7 +180,7 @@
                   alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
               </picture>
             </a>
-            <button type="button"></button>
+            <button type="button" class="service__button"></button>
           </li>
           <li>
             <a href="#">
@@ -200,7 +201,7 @@
                   alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
               </picture>
             </a>
-            <button type="button"></button>
+            <button type="button" class="service__button"></button>
           </li>
           <li>
             <a href="#">
@@ -221,9 +222,10 @@
                   alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
               </picture>
             </a>
-            <button type="button"></button>
+            <button type="button" class="service__button"></button>
           </li>
         </ol>
+      </div>
       </section>
 
       <section id="feedback" class="feedback">

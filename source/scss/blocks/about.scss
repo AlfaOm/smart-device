@@ -27,8 +27,12 @@
   display: block;
   width: 150px;
   height: 320px;
-  background-image: url(../img/date.png);
+  background-image: url("../img/date.png");
   background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/date@2x.png");
+  }
 
   @include vp-1023 {
     margin-top: 4px;
