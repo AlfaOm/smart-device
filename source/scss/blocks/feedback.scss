@@ -10,6 +10,7 @@
   background-size: 979px 917px;
 
   @include vp-1023 {
+    // padding: 0;
     padding-top: 41px;
     padding-bottom: 124px;
     background-image: none;
@@ -23,8 +24,6 @@
 
 .feedback__wrapper {
   display: flex;
-  // justify-content: space-between;
-  // column-gap: 110px;
 
   @include vp-1023 {
     display: block;
@@ -98,20 +97,20 @@
 
 .feedback__input-wrapper {
   margin-bottom: 20px;
-  display: flex;
-  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   column-gap: 30px;
 
   @include vp-769 {
-    flex-wrap: wrap;
+    width: 100%;
+    grid-template-columns: 1fr;
     row-gap: 20px;
   }
 }
 
 .feedback input {
   padding: 16px;
-  min-width: 275px;
-  // width: 100%;
+  min-width: 270px;
   background-color: rgba($color-black-pearl, 0.15);
   color: $color-default-white;
   border: none;
@@ -127,11 +126,12 @@
   }
 
   @include vp-1023 {
-    width: 100%;
+    // width: 50%;
   }
 
   @include vp-769 {
-    min-width: 270px;
+    // min-width: 270px;
+    // width: 100%;
   }
 }
 
@@ -177,7 +177,6 @@
 .feedback__button-checkbox {
   display: flex;
   align-items: flex-end;
-  // column-gap: 76px;
 
   @include vp-1023 {
     align-items: center;
@@ -185,7 +184,6 @@
 
   @include vp-769 {
     flex-direction: column;
-    // justify-content: flex-start;
     align-items: flex-start;
   }
 }

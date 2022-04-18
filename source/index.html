@@ -228,6 +228,7 @@
         </div>
       </section>
 
+
       <section id="feedback" class="feedback">
         <h2 class="visually-hidden">Обратная связь</h2>
         <div class="feedback__wrapper container">
@@ -259,9 +260,6 @@
           </form>
         </div>
       </section>
-
-      <!-- <p><a class="button" href="#" data-open-modal="feedback">modal--feedback</a></p>
-      <p><a class="button" href="#" data-open-modal="success">modal--success</a></p> -->
 
     </main>
     <footer class="page-footer">
@@ -359,28 +357,50 @@
   </div>
 
   <!-- Модалки -->
-  <div class="modal modal--preload" data-modal="feedback">
+  <div class="modal" data-modal="feedback">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Обычная модалка</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
-          </svg>
-        </button>
+      <div class="modal__content modal__feedback">
+        <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off">
+          <strong>Закажите звонок</strong>
+          <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+          <div class="modal__content-form-wrapper">
+
+            <label class="visually-hidden" for="modal-callback-name">Введите ваше имя</label>
+            <input type="text" name="name" id="modal-callback-name" placeholder="Имя" required>
+
+            <label class="visually-hidden" for="modal-callback-tel">Введите номер телефона</label>
+            <input type="tel" name="tel" id="modal-callback-tel" minlength="10" placeholder="Телефон" required>
+
+            <label class="visually-hidden" for="modal-callback-question">Напишите ваш вопрос</label>
+            <textarea id="modal-callback-question" name="comment" cols="20" rows="5"
+              placeholder="Ваш вопрос"></textarea>
+            <div class="modal__content-button-checkbox">
+              <button class="button modal__content-button" type="submit">Отправить</button>
+
+              <input class="visually-hidden" type="checkbox" name="checkbox" id="modal-callback-checkbox" checked
+                required>
+              <label for="modal-callback-checkbox">Я&nbsp;согласен на&nbsp;обработку &ensp;персональных данных</label>
+            </div>
+          </div>
+          <button class="modal__close" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="40" height="40">
+              <use xlink:href="img/sprite/sprite_auto.svg#icon-close"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
   </div>
 
-  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+  <div class="modal modal-success" data-modal="success">
     <div class="modal__wrapper">
       <div class="modal__overlay" data-close-modal></div>
-      <div class="modal__content">
-        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
-          <svg width="15" height="15">
-            <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+      <div class="modal__success-content">
+        <p class="modal__success-description">Ваша заявка принята! Мы скоро Вам перезвоним!</p>
+        <button class="modal__close" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="40" height="40">
+            <use xlink:href="img/sprite/sprite_auto.svg#icon-close"></use>
           </svg>
         </button>
       </div>
