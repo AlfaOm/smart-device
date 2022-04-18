@@ -11,6 +11,10 @@
     content="Умные технологии, печатные платы, электронные комплектующие, производство, монтаж, поставка, срочные заказы">
   <meta name="robots" content="index, follow">
   <title>Smart Device</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="preload" href="fonts/pt-mono-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-regular.woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-bold.woff2" as="font" crossorigin="anonymous">
@@ -33,10 +37,6 @@
 
         <div class="page-header__contact">
           <div class="page-header__email">
-            <!-- <svg width="21" height="20">
-              <use xlink:href="img/sprite/sprite_auto.svg#email"></use>
-            </svg>
-            <a href="mailto:info@sd.ru">info@sd.ru</a> -->
             <a href="mailto:info@sd.ru">
               <svg width="21" height="20">
                 <use xlink:href="img/sprite/sprite_auto.svg#email"></use>
@@ -46,10 +46,6 @@
           </div>
 
           <div class="page-header__phone">
-            <!-- <svg width="21" height="20">
-              <use xlink:href="img/sprite/sprite_auto.svg#phone"></use>
-            </svg>
-            <a href="tel:84950005252">+7 (495) 000 52 52</a> -->
             <a href="tel:84950005252">
               <svg width="21" height="20">
                 <use xlink:href="img/sprite/sprite_auto.svg#phone"></use>
@@ -132,13 +128,16 @@
             <p>Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые
               технологии&nbsp;с 1997&nbsp;года. Выполняем срочные заказы&nbsp;и пилотные образцы до&nbsp;10&nbsp;дней.
             </p>
-            <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
-            <span class="about__text-mob about__text-mob--hidden about__text-mob--nojs">Печатные платы и&nbsp;комплектующие Service Devices
-              применяются на&nbsp;предприятиях
-              Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
-              клиентов
-              крупнейшие Производители светотехники России.</p>
-            </span>
+            <p>Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC,
+              REFOND.
+              <span class="about__text-mob about__text-mob--hidden about__text-mob--nojs">Печатные платы
+                и&nbsp;комплектующие Service Devices
+                применяются на&nbsp;предприятиях
+                Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших
+                клиентов
+                крупнейшие Производители светотехники России.
+              </span>
+            </p>
 
             <div class="about__text-desk about__text-desk--hidden about__text-desk--nojs">
               <p>Smart Device&nbsp;&mdash; это команда профессионалов. Через нас прошло более
@@ -158,107 +157,111 @@
 
       <section class="service">
         <div class="container">
-        <h2><span class="service__heading-desk">Smart Device предлагает следующие товары и&nbsp;услуги</span><span class="service__heading-mob">Товары и&nbsp;услуги Smart Device</span></h2>
+          <h2><span class="service__heading-desk">Smart Device предлагает следующие товары и&nbsp;услуги</span><span
+              class="service__heading-mob">Товары и&nbsp;услуги Smart Device</span></h2>
 
-        <ol>
-          <li>
-            <a href="#">
-              <h3>Производство печатных плат</h3>
-              <picture>
-                <!-- 1x: 270px; 2x: 540px -->
-                <source media="(max-width: 769px)" srcset="img/service-1-mob.webp 1x, img/service-1-mob@2x.webp 2x"
-                  type="image/webp">
-                <source media="(max-width: 769px)" srcset="img/service-1-mob.jpg 1x, img/service-1-mob@2x.jpg 2x">
-                <!-- 1x: 670px; 2x: 1340px; -->
-                <source media="(max-width: 1023px)" srcset="img/service-1-tab.webp 1x, img/service-1-tab@2x.webp 2x"
-                  type="image/webp">
-                <source media="(max-width: 1023px)" srcset="img/service-1-tab.jpg 1x, img/service-1-tab@2x.jpg 2x">
-                <!-- 1x: 350px; 2x: 700px; -->
-                <source media="(min-width: 1024px)" srcset="img/service-1.webp 1x, img/service-1@2x.webp 2x"
-                  type="image/webp">
-                <img src="img/service-1.jpg" srcset="img/service-1@2x.jpg 2x" width="350" height="650"
-                  alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
-              </picture>
-            </a>
-            <button type="button" class="service__button"></button>
-          </li>
-          <li>
-            <a href="#">
-              <h3>Монтаж печатных плат</h3>
-              <picture>
-                <!-- 1x: 270px; 2x: 540px -->
-                <source media="(max-width: 769px)" srcset="img/service-2-mob.webp 1x, img/service-2-mob@2x.webp 2x"
-                  type="image/webp">
-                <source media="(max-width: 769px)" srcset="img/service-2-mob.jpg 1x, img/service-2-mob@2x.jpg 2x">
-                <!-- 1x: 670px; 2x: 1340px; -->
-                <source media="(max-width: 1023px)" srcset="img/service-2-tab.webp 1x, img/service-2-tab@2x.webp 2x"
-                  type="image/webp">
-                <source media="(max-width: 1023px)" srcset="img/service-2-tab.jpg 1x, img/service-2-tab@2x.jpg 2x">
-                <!-- 1x: 350px; 2x: 700px; -->
-                <source media="(min-width: 1024px)" srcset="img/service-2.webp 1x, img/service-2@2x.webp 2x"
-                  type="image/webp">
-                <img src="img/service-2.jpg" srcset="img/service-2@2x.jpg 2x" width="350" height="650"
-                  alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
-              </picture>
-            </a>
-            <button type="button" class="service__button"></button>
-          </li>
-          <li>
-            <a href="#">
-              <h3>Комплектующие для светотехники</h3>
-              <picture>
-                <!-- 1x: 270px; 2x: 540px -->
-                <source media="(max-width: 769px)" srcset="img/service-3-mob.webp 1x, img/service-3-mob@2x.webp 2x"
-                  type="image/webp">
-                <source media="(max-width: 769px)" srcset="img/service-3-mob.jpg 1x, img/service-3-mob@2x.jpg 2x">
-                <!-- 1x: 670px; 2x: 1340px; -->
-                <source media="(max-width: 1023px)" srcset="img/service-3-tab.webp 1x, img/service-3-tab@2x.webp 2x"
-                  type="image/webp">
-                <source media="(max-width: 1023px)" srcset="img/service-3-tab.jpg 1x, img/service-3-tab@2x.jpg 2x">
-                <!-- 1x: 350px; 2x: 700px; -->
-                <source media="(min-width: 1024px)" srcset="img/service-3.webp 1x, img/service-3@2x.webp 2x"
-                  type="image/webp">
-                <img src="img/service-3.jpg" srcset="img/service-3@2x.jpg 2x" width="350" height="650"
-                  alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
-              </picture>
-            </a>
-            <button type="button" class="service__button"></button>
-          </li>
-        </ol>
-      </div>
+          <ol>
+            <li>
+              <a href="#">
+                <h3>Производство печатных плат</h3>
+                <picture>
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <source media="(max-width: 769px)" srcset="img/service-1-mob.webp 1x, img/service-1-mob@2x.webp 2x"
+                    type="image/webp">
+                  <source media="(max-width: 769px)" srcset="img/service-1-mob.jpg 1x, img/service-1-mob@2x.jpg 2x">
+                  <!-- 1x: 670px; 2x: 1340px; -->
+                  <source media="(max-width: 1023px)" srcset="img/service-1-tab.webp 1x, img/service-1-tab@2x.webp 2x"
+                    type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="img/service-1-tab.jpg 1x, img/service-1-tab@2x.jpg 2x">
+                  <!-- 1x: 350px; 2x: 700px; -->
+                  <source media="(min-width: 1024px)" srcset="img/service-1.webp 1x, img/service-1@2x.webp 2x"
+                    type="image/webp">
+                  <img src="img/service-1.jpg" srcset="img/service-1@2x.jpg 2x" width="350" height="650"
+                    alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
+                </picture>
+              </a>
+              <button type="button" class="service__button"></button>
+            </li>
+            <li>
+              <a href="#">
+                <h3>Монтаж печатных плат</h3>
+                <picture>
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <source media="(max-width: 769px)" srcset="img/service-2-mob.webp 1x, img/service-2-mob@2x.webp 2x"
+                    type="image/webp">
+                  <source media="(max-width: 769px)" srcset="img/service-2-mob.jpg 1x, img/service-2-mob@2x.jpg 2x">
+                  <!-- 1x: 670px; 2x: 1340px; -->
+                  <source media="(max-width: 1023px)" srcset="img/service-2-tab.webp 1x, img/service-2-tab@2x.webp 2x"
+                    type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="img/service-2-tab.jpg 1x, img/service-2-tab@2x.jpg 2x">
+                  <!-- 1x: 350px; 2x: 700px; -->
+                  <source media="(min-width: 1024px)" srcset="img/service-2.webp 1x, img/service-2@2x.webp 2x"
+                    type="image/webp">
+                  <img src="img/service-2.jpg" srcset="img/service-2@2x.jpg 2x" width="350" height="650"
+                    alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
+                </picture>
+              </a>
+              <button type="button" class="service__button"></button>
+            </li>
+            <li>
+              <a href="#">
+                <h3>Комплектующие для светотехники</h3>
+                <picture>
+                  <!-- 1x: 270px; 2x: 540px -->
+                  <source media="(max-width: 769px)" srcset="img/service-3-mob.webp 1x, img/service-3-mob@2x.webp 2x"
+                    type="image/webp">
+                  <source media="(max-width: 769px)" srcset="img/service-3-mob.jpg 1x, img/service-3-mob@2x.jpg 2x">
+                  <!-- 1x: 670px; 2x: 1340px; -->
+                  <source media="(max-width: 1023px)" srcset="img/service-3-tab.webp 1x, img/service-3-tab@2x.webp 2x"
+                    type="image/webp">
+                  <source media="(max-width: 1023px)" srcset="img/service-3-tab.jpg 1x, img/service-3-tab@2x.jpg 2x">
+                  <!-- 1x: 350px; 2x: 700px; -->
+                  <source media="(min-width: 1024px)" srcset="img/service-3.webp 1x, img/service-3@2x.webp 2x"
+                    type="image/webp">
+                  <img src="img/service-3.jpg" srcset="img/service-3@2x.jpg 2x" width="350" height="650"
+                    alt="Первая часть коллажа изображения печатной платы с электронными деталями: индукционная катушка, конденсатор, транзистор, угловая часть разъёма для микропроцессора">
+                </picture>
+              </a>
+              <button type="button" class="service__button"></button>
+            </li>
+          </ol>
+        </div>
       </section>
 
       <section id="feedback" class="feedback">
         <h2 class="visually-hidden">Обратная связь</h2>
+        <div class="feedback__wrapper container">
+          <img src="img/airplane.png" srcset="img/airplane@2x.png" width="510" height="285"
+            alt="3D-изображение бумажного самолетика">
 
-        <img src="img/airplane.png" srcset="img/airplane@2x.png" width="510" height="285"
-          alt="3D-изображение бумажного самолетика">
+          <form action="https://echo.htmlacademy.ru" method="post" enctype="multipart/form-data" autocomplete="off">
+            <strong>Остались вопросы? Задайте их&nbsp;нам!</strong>
+            <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
+            <div class="feedback__form-wrapper">
+              <div class="feedback__input-wrapper">
+                <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
+                <input type="text" name="name" id="feedback-name" placeholder="Имя" required>
 
-        <form action="https://echo.htmlacademy.ru" method="get" autocomplete="off">
-          <strong>Остались вопросы? Задайте их&nbsp;нам!</strong>
-          <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
-          <div class="feedback__input-wrapper">
-            <label class="visually-hidden" for="feedback-name">Введите ваше имя</label>
-            <input type="text" name="name" id="feedback-name" placeholder="Имя" required>
-          </div>
-          <div id="input-tel" class="feedback__input-wrapper">
-            <label class="visually-hidden" for="feedback-tel">Введите номер телефона</label>
-            <input type="tel" name="tel" id="feedback-tel" minlength="10" placeholder="Телефон" required>
-          </div>
-          <div id="textarea" class="feedback__textarea">
-            <label class="visually-hidden" for="question">Напишите ваш вопрос</label>
-            <textarea id="question" name="comment" cols="20" rows="7" placeholder="Ваш вопрос"></textarea>
-          </div>
-          <button class="button feedback__button" type="submit">Задать вопрос</button>
-          <div class="feedback__input-checkbox">
-            <input class="visually-hidden" type="checkbox" name="checkbox" id="feedback-checkbox" checked required>
-            <label for="feedback-checkbox">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
-          </div>
-        </form>
+                <label class="visually-hidden" for="feedback-tel">Введите номер телефона</label>
+                <input type="tel" name="tel" id="feedback-tel" minlength="10" placeholder="Телефон" required>
+              </div>
+              <div class="feedback__textarea">
+                <label class="visually-hidden" for="question">Напишите ваш вопрос</label>
+                <textarea id="question" name="comment" cols="20" rows="5" placeholder="Ваш вопрос"></textarea>
+              </div>
+              <div class="feedback__button-checkbox">
+                <button class="button feedback__button" type="submit">Задать вопрос</button>
+
+                <input class="visually-hidden" type="checkbox" name="checkbox" id="feedback-checkbox" checked required>
+                <label for="feedback-checkbox">Я&nbsp;согласен на&nbsp;обработку персональных данных</label>
+              </div>
+            </div>
+          </form>
+        </div>
       </section>
 
-      <p><a class="button" href="#" data-open-modal="feedback">modal--feedback</a></p>
-      <p><a class="button" href="#" data-open-modal="success">modal--success</a></p>
+      <!-- <p><a class="button" href="#" data-open-modal="feedback">modal--feedback</a></p>
+      <p><a class="button" href="#" data-open-modal="success">modal--success</a></p> -->
 
     </main>
     <footer class="page-footer">

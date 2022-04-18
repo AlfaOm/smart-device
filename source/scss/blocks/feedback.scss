@@ -1,0 +1,269 @@
+.feedback {
+  padding-top: 162px;
+  // padding-right: 50px;
+  padding-bottom: 248px;
+  // padding-left: 50px;
+  background-color: $color-deep-sky-blue;
+  background-image: url("../img/background/bg-treangle-feedback.png");
+  background-position: left -76px;
+  background-repeat: no-repeat;
+  background-size: 979px 917px;
+
+  @include vp-1023 {
+    padding-top: 41px;
+    padding-bottom: 124px;
+    background-image: none;
+  }
+
+  @include vp-769 {
+    padding-top: 47px;
+    padding-bottom: 90px;
+  }
+}
+
+.feedback__wrapper {
+  display: flex;
+  // justify-content: space-between;
+  // column-gap: 110px;
+
+  @include vp-1023 {
+    display: block;
+  }
+}
+
+.feedback img {
+  margin-top: 84px;
+  margin-right: 20px;
+  max-width: 510px;
+  min-width: 310px;
+  height: 285px;
+  object-fit: contain;
+
+  @include vp-1023 {
+    display: none;
+  }
+}
+
+.feedback__form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedback form {
+  margin-left: auto;
+  margin-right: 10px;
+
+  @include vp-1023 {
+    margin: 0;
+  }
+}
+
+.feedback strong {
+  margin-bottom: 9px;
+  margin-left: -5px;
+  display: block;
+  font-family: $ff-roboto-condensed;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 3px;
+    margin-left: 0;
+  }
+
+  @include vp-769 {
+    margin-bottom: 7px;
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.feedback p {
+  margin: 0;
+  margin-bottom: 33px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-bottom: 24px;
+  }
+
+  @include vp-769 {
+    margin-bottom: 33px;
+    font-size: 14px;
+    line-height: 19px;
+  }
+}
+
+.feedback__input-wrapper {
+  margin-bottom: 20px;
+  display: flex;
+  // justify-content: space-between;
+  column-gap: 30px;
+
+  @include vp-769 {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+}
+
+.feedback input {
+  padding: 16px;
+  min-width: 275px;
+  // width: 100%;
+  background-color: rgba($color-black-pearl, 0.15);
+  color: $color-default-white;
+  border: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color-black-pearl, 0.3);
+  }
+
+  @include vp-1023 {
+    width: 100%;
+  }
+
+  @include vp-769 {
+    min-width: 270px;
+  }
+}
+
+.feedback textarea {
+  padding: 25px 15px;
+  min-width: 580px;
+  // width: 100%;
+  min-height: 155px;
+  background-color: rgba($color-black-pearl, 0.15);
+  color: $color-default-white;
+  border: none;
+  border-radius: 3px;
+
+  &::placeholder {
+    color: $color-default-white;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: rgba($color-black-pearl, 0.3);
+  }
+
+  @include vp-1023 {
+    padding-top: 33px;
+    width: 100%;
+  }
+
+  @include vp-769 {
+    padding-top: 25px;
+    min-width: 270px;
+    min-height: 180px;
+  }
+}
+
+.feedback__textarea {
+  margin-bottom: 35px;
+
+  @include vp-769 {
+    margin-bottom: 24px;
+  }
+}
+
+.feedback__button-checkbox {
+  display: flex;
+  align-items: flex-end;
+  // column-gap: 76px;
+
+  @include vp-1023 {
+    align-items: center;
+  }
+
+  @include vp-769 {
+    flex-direction: column;
+    // justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
+
+.feedback label {
+  margin-right: 5px;
+  margin-left: auto;
+  width: 234px;
+  font-size: 14px;
+  line-height: 15px;
+  color: $color-default-white;
+
+  @include vp-1023 {
+    margin-top: 4px;
+    margin-right: 61px;
+  }
+
+  @include vp-769 {
+    margin: 0;
+    margin-left: 31px;
+  }
+}
+
+.feedback__button-checkbox label {
+  position: relative;
+}
+
+.feedback__button-checkbox input:hover + label,
+.feedback__button-checkbox input:focus + label {
+  color: $color-black-pearl;
+}
+
+.feedback__button-checkbox input + label::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: -26px;
+  width: 15px;
+  height: 15px;
+  border: 1px solid $color-default-white;
+  border-radius: 2px;
+}
+
+.feedback__button-checkbox input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -24px;
+  width: 8px;
+  height: 5px;
+
+  background: url(../img/svg/checkbox.svg) no-repeat;
+}
+
+.feedback__button-checkbox input:hover + label::before,
+.feedback__button-checkbox input:focus + label::before,
+.feedback__button-checkbox input + label:hover::before,
+.feedback__button-checkbox input + label:focus:before {
+  border: 1px solid $color-black-pearl;
+  background-color: $color-black-pearl;
+}
+
+.feedback__button {
+  padding: 15px;
+  padding-bottom: 12px;
+  width: 265px;
+  letter-spacing: 0.05em;
+  color: $color-default-white;
+  background-color: $color-black-pearl;
+  border: none;
+
+  @include vp-1023 {
+    padding-top: 16px;
+    padding-bottom: 11px;
+  }
+
+  @include vp-769 {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
