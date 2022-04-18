@@ -1,6 +1,8 @@
 .page-footer {
   padding-top: 50px;
+  // padding-right: 50px;
   padding-bottom: 55px;
+  // padding-left: 50px;
   background-color: $color-black-pearl;
 
   @include vp-769 {

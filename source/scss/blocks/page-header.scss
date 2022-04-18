@@ -5,27 +5,39 @@
   padding-bottom: 35px;
   width: 100%;
   background: $color-bg-header;
-  z-index: 2;
+  z-index: 3;
 
-  @include vp-770 {
+  @include vp-1023 {
+    padding: 0;
     padding-top: 20px;
-    padding-right: 30px;
+    // padding-right: 50px;
     padding-bottom: 25px;
-    padding-left: 30px;
+    // padding-left: 30px;
   }
 
-  @include vp-374 {
+  @include vp-769 {
     padding-top: 15px;
-    padding-right: 10px;
+    padding-right: 25px;
     padding-bottom: 20px;
-    padding-left: 10px;
+    padding-left: 25px;
   }
+
+  // @include vp-374 {
+  //   padding-top: 15px;
+  //   padding-right: 10px;
+  //   padding-bottom: 20px;
+  //   padding-left: 10px;
+  // }
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @include vp-1023 {
+    // padding: 0;
+  }
 }
 
 .page-header__logo img {
@@ -40,27 +52,36 @@
 
 .page-header__contact {
   display: flex;
-  // align-items: center;
-  // justify-content: space-between;
   flex-wrap: wrap;
-  padding-top: 9px;
-  column-gap: 126px;
-
+  justify-content: space-between;
+  padding-top: 15px;
+  // column-gap: 126px;
   row-gap: 15px;
   margin-left: auto;
-  // max-width: 480px;
+  width: 453px;
 
-  @media (max-width: 1040px) {
-    margin-right: 12px;
-    margin-left: 10px;
-    column-gap: 40px;
+  // @media (max-width: 1040px) {
+  //   margin-right: 12px;
+  //   margin-left: 10px;
+  //   column-gap: 40px;
+  // }
+
+  @include vp-770 {
+    padding-top: 10px;
+    width: 90px;
+    margin-right: 14px;
   }
 
-  @include vp-374 {
-    margin-right: 2px;
+  @include vp-769 {
     padding-top: 5px;
-    column-gap: 38px;
+    margin-right: 5px;
   }
+
+  // @include vp-374 {
+  //   margin-right: 2px;
+  //   padding-top: 5px;
+  //   column-gap: 38px;
+  // }
 }
 
 .page-header__contact p {
@@ -79,11 +100,31 @@
   }
 }
 
-.page-header__email a,
-.page-header__phone a {
-  display: flex;
-  column-gap: 10px;
+.page-header__contact a {
+  position: relative;
+  width: 219px;
 }
+
+.page-header__contact svg {
+  position: absolute;
+  left: -36px;
+}
+
+.page-header__email {
+  margin-left: 29px;
+}
+
+// .page-header__phone {
+//   @include vp-770 {
+//     margin-left: 0px;
+//   }
+// }
+
+// .page-header__email a,
+// .page-header__phone a {
+//   display: flex;
+//   column-gap: 10px;
+// }
 
 .page-header__email:hover,
 .page-header__phone:hover,
@@ -97,8 +138,7 @@
   display: block;
   margin-top: 4px;
   margin-left: auto;
-  margin-right: 44px;
-  // padding: 18px 0px;
+  margin-right: 60px;
   padding-top: 11px;
   padding-bottom: 12px;
   width: 160px;
@@ -109,7 +149,7 @@
   background-color: transparent;
   border: 1px solid $color-alice-blue;
 
-  @include vp-770 {
+  @include vp-1023 {
     display: none;
   }
 }
