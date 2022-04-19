@@ -1,8 +1,8 @@
 .feedback {
   padding-top: 162px;
-  // padding-right: 50px;
+  padding-right: 50px;
   padding-bottom: 248px;
-  // padding-left: 50px;
+  padding-left: 50px;
   background-color: $color-deep-sky-blue;
   background-image: url("../img/background/bg-treangle-feedback.png");
   background-position: left -76px;
@@ -10,7 +10,7 @@
   background-size: 979px 917px;
 
   @include vp-1023 {
-    // padding: 0;
+    padding: 0;
     padding-top: 41px;
     padding-bottom: 124px;
     background-image: none;
@@ -124,21 +124,11 @@
   &:focus {
     background-color: rgba($color-black-pearl, 0.3);
   }
-
-  @include vp-1023 {
-    // width: 50%;
-  }
-
-  @include vp-769 {
-    // min-width: 270px;
-    // width: 100%;
-  }
 }
 
 .feedback textarea {
   padding: 25px 15px;
   min-width: 580px;
-  // width: 100%;
   min-height: 155px;
   background-color: rgba($color-black-pearl, 0.15);
   color: $color-default-white;
@@ -167,7 +157,7 @@
 }
 
 .feedback__textarea {
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 
   @include vp-769 {
     margin-bottom: 24px;

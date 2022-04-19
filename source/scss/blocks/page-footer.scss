@@ -1,9 +1,15 @@
 .page-footer {
   padding-top: 50px;
-  // padding-right: 50px;
+  padding-right: 50px;
   padding-bottom: 55px;
-  // padding-left: 50px;
+  padding-left: 50px;
   background-color: $color-black-pearl;
+
+  @include vp-1023 {
+    padding: 0;
+    padding-top: 50px;
+    padding-bottom: 55px;
+  }
 
   @include vp-769 {
     padding-top: 35px;
@@ -17,15 +23,15 @@
   @include vp-1023 {
     grid-template-columns: 1fr;
     grid-template-areas:
-    "l l"
-    "n a";
+      "l l"
+      "n a";
   }
 
   @include vp-769 {
     grid-template-areas:
-    "l"
-    "n"
-    "a";
+      "l"
+      "n"
+      "a";
   }
 }
 
@@ -80,7 +86,10 @@
 
   @include vp-1023 {
     margin-top: 10px;
-    margin-right: 13px;
+  }
+
+  @include vp-769 {
+    margin-right: 9px;
   }
 }
 
@@ -143,19 +152,6 @@
   text-transform: uppercase;
 }
 
-// .page-footer__nav ul {
-//   display: flex;
-//   flex-wrap: wrap;
-//   justify-content: space-between;
-//   margin: 0;
-//   padding: 0;
-//   list-style: none;
-
-//   @include vp-770 {
-//     justify-content: start;
-//   }
-// }
-
 .page-footer__nav-wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -193,7 +189,7 @@
   max-width: 345px;
 
   @include vp-1023 {
-    padding-left: 12px;
+    padding-left: 25px;
     grid-area: a;
   }
 

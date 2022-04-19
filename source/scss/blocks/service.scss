@@ -1,11 +1,12 @@
 .service {
   padding-top: 66px;
-  // padding-right: 50px;
+  padding-right: 50px;
   padding-bottom: 140px;
-  // padding-left: 50px;
+  padding-left: 50px;
   background-color: $color-black-pearl;
 
   @include vp-1023 {
+    padding: 0;
     padding-top: 55px;
     padding-bottom: 75px;
   }
@@ -34,7 +35,6 @@
 
   @include vp-769 {
     margin-bottom: 28px;
-    // max-width: 262px;
     max-width: 344px;
     font-size: 28px;
     line-height: 40px;
@@ -126,7 +126,6 @@
   }
 
   @include vp-769 {
-    // width: 270px;
     height: 250px;
   }
 }
@@ -146,11 +145,6 @@
     width: 40px;
     height: 40px;
   }
-
-  // &:hover,
-  // &:focus {
-  //   opacity: 0.6;
-  // }
 
   &::after {
     content: "";
