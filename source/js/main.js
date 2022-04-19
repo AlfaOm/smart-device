@@ -1,41 +1,28 @@
-// import {iosVhFix} from './utils/ios-vh-fix';
-// import {initModals} from './modules/modals/init-modals';
-
-// ---------------------------------
-
-window.addEventListener('DOMContentLoaded', () => {
-  // Utils
-  // ---------------------------------
-
-  // iosVhFix();
-
-  // Modules
-  // ---------------------------------
-
+window.addEventListener("DOMContentLoaded", () => {
   // Аккордеон в футере
 
-  const accordions = document.querySelectorAll('.accordion');
-  const accordionToggle = document.querySelectorAll('.accordion__toggle');
-  const accordionContents = document.querySelectorAll('.accordion__content');
+  const accordions = document.querySelectorAll(".accordion");
+  const accordionToggle = document.querySelectorAll(".accordion__toggle");
+  const accordionContents = document.querySelectorAll(".accordion__content");
 
   const toggles = Array.from(accordionToggle);
   toggles.forEach((el) => {
-    el.classList.remove('accordion__toggle--nojs');
+    el.classList.remove("accordion__toggle--nojs");
   });
 
   const contents = Array.from(accordionContents);
   contents.forEach((el) => {
-    el.classList.remove('accordion__content--nojs');
+    el.classList.remove("accordion__content--nojs");
   });
 
   const hiddenContent = (button, content) => {
-    button.classList.remove('accordion__toggle--active');
-    content.classList.remove('accordion__content--show');
+    button.classList.remove("accordion__toggle--active");
+    content.classList.remove("accordion__content--show");
   };
 
   const showContent = (button, content) => {
-    button.classList.add('accordion__toggle--active');
-    content.classList.add('accordion__content--show');
+    button.classList.add("accordion__toggle--active");
+    content.classList.add("accordion__content--show");
   };
 
   const toggleAccordion = (evt) => {
@@ -43,11 +30,11 @@ window.addEventListener('DOMContentLoaded', () => {
       accordionContents,
       function (accordionContent) {
         let button = accordionContent
-          .closest('.accordion')
-          .querySelector('.accordion__toggle');
+          .closest(".accordion")
+          .querySelector(".accordion__toggle");
         if (
           (button === evt.target &&
-            !button.classList.contains('accordion__toggle')) ||
+            !button.classList.contains("accordion__toggle")) ||
           button !== evt.target
         ) {
           hiddenContent(button, accordionContent);
@@ -59,66 +46,66 @@ window.addEventListener('DOMContentLoaded', () => {
   };
 
   Array.prototype.forEach.call(accordions, function (accordion) {
-    let toggleButton = accordion.querySelector('.accordion__toggle');
-    let accordionContent = accordion.querySelector('.accordion__content');
+    let toggleButton = accordion.querySelector(".accordion__toggle");
+    let accordionContent = accordion.querySelector(".accordion__content");
     hiddenContent(toggleButton, accordionContent);
-    toggleButton.addEventListener('click', toggleAccordion);
+    toggleButton.addEventListener("click", toggleAccordion);
   });
 
   // Показать/скрыть текст блока 'О компании'
 
-  const textHiddenDesk = document.querySelector('.about__text-desk');
-  const textHiddenMob = document.querySelector('.about__text-mob');
-  const aboutButton = document.querySelector('.about__button');
+  const textHiddenDesk = document.querySelector(".about__text-desk");
+  const textHiddenMob = document.querySelector(".about__text-mob");
+  const aboutButton = document.querySelector(".about__button");
 
-  textHiddenDesk.classList.remove('about__text-desk--nojs');
-  textHiddenMob.classList.remove('about__text-mob--nojs');
+  textHiddenDesk.classList.remove("about__text-desk--nojs");
+  textHiddenMob.classList.remove("about__text-mob--nojs");
 
   const readMore = () => {
-    if (textHiddenDesk.classList.contains('about__text-desk--hidden')) {
-      textHiddenDesk.classList.remove('about__text-desk--hidden');
-      aboutButton.innerHTML = 'Скрыть';
+    if (textHiddenDesk.classList.contains("about__text-desk--hidden")) {
+      textHiddenDesk.classList.remove("about__text-desk--hidden");
+      aboutButton.innerHTML = "Скрыть";
     } else {
-      textHiddenDesk.classList.add('about__text-desk--hidden');
-      aboutButton.innerHTML = 'Подробнее';
+      textHiddenDesk.classList.add("about__text-desk--hidden");
+      aboutButton.innerHTML = "Подробнее";
     }
 
-    if (textHiddenMob.classList.contains('about__text-mob--hidden')) {
-      textHiddenMob.classList.remove('about__text-mob--hidden');
-      aboutButton.innerHTML = 'Скрыть';
+    if (textHiddenMob.classList.contains("about__text-mob--hidden")) {
+      textHiddenMob.classList.remove("about__text-mob--hidden");
+      aboutButton.innerHTML = "Скрыть";
     } else {
-      textHiddenMob.classList.add('about__text-mob--hidden');
-      aboutButton.innerHTML = 'Подробнее';
+      textHiddenMob.classList.add("about__text-mob--hidden");
+      aboutButton.innerHTML = "Подробнее";
     }
   };
 
-  aboutButton.addEventListener('click', readMore);
+  aboutButton.addEventListener("click", readMore);
 
   // Modal
 
-  let buttonFeedback = document.querySelector('[data-open-modal]');
+  let buttonFeedback = document.querySelector("[data-open-modal]");
 
-  let modal = document.querySelector('.modal');
-  let modalSuccess = document.querySelector('.modal-success');
-  let modalClose = document.querySelectorAll('.modal__close');
-  let closeInnerModal = document.querySelectorAll('.modal__overlay');
+  let modal = document.querySelector(".modal");
+  let modalSuccess = document.querySelector(".modal-success");
+  let modalClose = document.querySelectorAll(".modal__close");
+  let closeInnerModal = document.querySelectorAll(".modal__overlay");
 
-  let modalForm = modal.querySelector('form');
-  let modalLogin = modal.querySelector('[name=name]');
-  let modalTel = modal.querySelector('[name=tel]');
+  let modalForm = modal.querySelector("form");
+  let modalLogin = modal.querySelector("[name=name]");
+  let modalTel = modal.querySelector("[name=tel]");
 
   let isStorageSupport = true;
-  let storage = '';
+  let storage = "";
 
   try {
-    storage = localStorage.getItem('name');
+    storage = localStorage.getItem("name");
   } catch (err) {
     isStorageSupport = false;
   }
 
-  buttonFeedback.addEventListener('click', function (evt) {
+  buttonFeedback.addEventListener("click", function (evt) {
     evt.preventDefault();
-    modal.classList.add('modal--show');
+    modal.classList.add("modal--show");
 
     if (storage) {
       modalLogin.value = storage;
@@ -129,46 +116,46 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   modalClose.forEach((el) => {
-    el.addEventListener('click', function (evt) {
+    el.addEventListener("click", function (evt) {
       evt.preventDefault();
-      modal.classList.remove('modal--show');
-      modalSuccess.classList.remove('modal-success--show');
+      modal.classList.remove("modal--show");
+      modalSuccess.classList.remove("modal-success--show");
     });
   });
 
-  modalForm.addEventListener('submit', function (evt) {
+  modalForm.addEventListener("submit", function (evt) {
     if (modalLogin.value || modalTel.value) {
       evt.preventDefault();
-      modal.classList.remove('modal--show');
-      modalSuccess.classList.add('modal-success--show');
+      modal.classList.remove("modal--show");
+      modalSuccess.classList.add("modal-success--show");
     } else {
       if (isStorageSupport) {
-        localStorage.setItem('name', modalLogin.value);
+        localStorage.setItem("name", modalLogin.value);
       }
     }
   });
 
-  window.addEventListener('keydown', function (evt) {
+  window.addEventListener("keydown", function (evt) {
     if (evt.keyCode === 27) {
       evt.preventDefault();
-      if (modal.classList.contains('modal--show')) {
-        modal.classList.remove('modal--show');
+      if (modal.classList.contains("modal--show")) {
+        modal.classList.remove("modal--show");
       }
 
-      if (modalSuccess.classList.contains('modal-success--show')) {
-        modalSuccess.classList.remove('modal-success--show');
+      if (modalSuccess.classList.contains("modal-success--show")) {
+        modalSuccess.classList.remove("modal-success--show");
       }
     }
   });
 
   closeInnerModal.forEach((el) => {
-    el.addEventListener('click', function () {
-      if (modal.classList.contains('modal--show')) {
-        modal.classList.remove('modal--show');
+    el.addEventListener("click", function () {
+      if (modal.classList.contains("modal--show")) {
+        modal.classList.remove("modal--show");
       }
 
-      if (modalSuccess.classList.contains('modal-success--show')) {
-        modalSuccess.classList.remove('modal-success--show');
+      if (modalSuccess.classList.contains("modal-success--show")) {
+        modalSuccess.classList.remove("modal-success--show");
       }
     });
   });
@@ -182,14 +169,14 @@ window.addEventListener('DOMContentLoaded', () => {
         event.keyCode && (keyCode = event.keyCode);
         let pos = this.selectionStart;
         if (pos < 3) event.preventDefault();
-        let matrix = '+7 (___) ___ ____',
+        let matrix = "+7 (___) ___ ____",
           i = 0,
-          def = matrix.replace(/\D/g, ''),
-          val = this.value.replace(/\D/g, ''),
+          def = matrix.replace(/\D/g, ""),
+          val = this.value.replace(/\D/g, ""),
           new_value = matrix.replace(/[_\d]/g, function (a) {
             return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
           });
-        i = new_value.indexOf('_');
+        i = new_value.indexOf("_");
         if (i != -1) {
           i < 5 && (i = 3);
           new_value = new_value.slice(0, i);
@@ -197,54 +184,23 @@ window.addEventListener('DOMContentLoaded', () => {
         let reg = matrix
           .substr(0, this.value.length)
           .replace(/_+/g, function (a) {
-            return '\\d{1,' + a.length + '}';
+            return "\\d{1," + a.length + "}";
           })
-          .replace(/[+()]/g, '\\$&');
-        reg = new RegExp('^' + reg + '$');
+          .replace(/[+()]/g, "\\$&");
+        reg = new RegExp("^" + reg + "$");
         if (
           !reg.test(this.value) ||
           this.value.length < 5 ||
           (keyCode > 47 && keyCode < 58)
         )
           this.value = new_value;
-        if (event.type == 'blur' && this.value.length < 5) this.value = '';
+        if (event.type == "blur" && this.value.length < 5) this.value = "";
       }
 
-      input.addEventListener('input', mask, false);
-      input.addEventListener('focus', mask, false);
-      input.addEventListener('blur', mask, false);
-      input.addEventListener('keydown', mask, false);
+      input.addEventListener("input", mask, false);
+      input.addEventListener("focus", mask, false);
+      input.addEventListener("blur", mask, false);
+      input.addEventListener("keydown", mask, false);
     }
   );
-
-  // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
-  // в load следует добавить скрипты, не участвующие в работе первого экрана
-  window.addEventListener('load', () => {
-    // initModals();
-  });
 });
-
-// ---------------------------------
-
-// ❗❗❗ обязательно установите плагины eslint, stylelint, editorconfig в редактор кода.
-
-// привязывайте js не на классы, а на дата атрибуты (data-validate)
-
-// вместо модификаторов .block--active используем утилитарные классы
-// .is-active || .is-open || .is-invalid и прочие (обязателен нейминг в два слова)
-// .select.select--opened ❌ ---> [data-select].is-open ✅
-
-// выносим все в дата атрибуты
-// url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
-
-// для адаптивного JS используейтся matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
-// const breakpointChecker = () => {
-//   if (breakpoint.matches) {
-//   } else {
-//   }
-// };
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
-
-// используйте .closest(el)

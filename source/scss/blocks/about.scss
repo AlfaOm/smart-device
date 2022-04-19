@@ -1,14 +1,12 @@
 .about {
   padding-top: 60px;
+  padding-right: 50px;
   padding-bottom: 100px;
+  padding-left: 50px;
   background-color: $color-alice-blue2;
 
-  // @media (max-width: 1270px) {
-  //   padding-right: 50px;
-  //   padding-left: 50px;
-  // }
-
   @include vp-1023 {
+    padding: 0;
     padding-top: 35px;
     padding-bottom: 80px;
   }
@@ -73,7 +71,6 @@
 }
 
 .about__text-desk {
-
   &--hidden {
     display: none;
   }

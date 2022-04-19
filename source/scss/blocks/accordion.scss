@@ -31,7 +31,6 @@
       transform: rotate(90deg);
     }
 
-
     &--active::after {
       transform: rotate(0deg);
     }
@@ -55,4 +54,3 @@
     display: block;
   }
 }
-

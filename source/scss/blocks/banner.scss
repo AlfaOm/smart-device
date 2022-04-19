@@ -1,7 +1,6 @@
 .banner {
   padding-top: 304px;
   padding-bottom: 296px;
-  // padding-left: 125px;
   background-color: $color-bg-black-perl;
   background-image: url("../img/background/bg-banner-desk.png");
   background-position: center top;
@@ -102,24 +101,30 @@
   letter-spacing: 0.05em;
   color: $color-alice-blue;
 
-  &--mobile {
-    display: none;
-  }
-
   @include vp-1023 {
     margin-left: 45px;
   }
 
   @include vp-769 {
-    display: none;
-
-    &--mobile {
       display: block;
       margin-left: 0;
       padding: 12px 30px;
       max-width: 451px;
       font-size: 14px;
       line-height: 16px;
-    }
+  }
+}
+
+.banner__button-text-desk {
+  @include vp-769 {
+    display: none;
+  }
+}
+
+.banner__button-text-mob {
+  display: none;
+
+  @include vp-769 {
+    display: block;
   }
 }

@@ -10,34 +10,19 @@
   @include vp-1023 {
     padding: 0;
     padding-top: 20px;
-    // padding-right: 50px;
     padding-bottom: 25px;
-    // padding-left: 30px;
   }
 
   @include vp-769 {
     padding-top: 15px;
-    padding-right: 25px;
     padding-bottom: 20px;
-    padding-left: 25px;
   }
-
-  // @include vp-374 {
-  //   padding-top: 15px;
-  //   padding-right: 10px;
-  //   padding-bottom: 20px;
-  //   padding-left: 10px;
-  // }
 }
 
 .page-header__wrapper {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-
-  @include vp-1023 {
-    // padding: 0;
-  }
 }
 
 .page-header__logo img {
@@ -55,18 +40,11 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 15px;
-  // column-gap: 126px;
   row-gap: 15px;
   margin-left: auto;
   width: 453px;
 
-  // @media (max-width: 1040px) {
-  //   margin-right: 12px;
-  //   margin-left: 10px;
-  //   column-gap: 40px;
-  // }
-
-  @include vp-770 {
+  @include vp-1023 {
     padding-top: 10px;
     width: 90px;
     margin-right: 14px;
@@ -76,12 +54,6 @@
     padding-top: 5px;
     margin-right: 5px;
   }
-
-  // @include vp-374 {
-  //   margin-right: 2px;
-  //   padding-top: 5px;
-  //   column-gap: 38px;
-  // }
 }
 
 .page-header__contact p {
@@ -113,18 +85,6 @@
 .page-header__email {
   margin-left: 29px;
 }
-
-// .page-header__phone {
-//   @include vp-770 {
-//     margin-left: 0px;
-//   }
-// }
-
-// .page-header__email a,
-// .page-header__phone a {
-//   display: flex;
-//   column-gap: 10px;
-// }
 
 .page-header__email:hover,
 .page-header__phone:hover,
