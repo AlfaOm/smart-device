@@ -7,6 +7,7 @@
   z-index: 1000;
 
   display: none;
+  overflow-y: scroll;
 
   &--show {
     display: block;
@@ -31,6 +32,7 @@
   background-color: $color-default-black;
   opacity: 0.7;
   z-index: 1;
+
 }
 
 .modal__content form {
@@ -43,6 +45,7 @@
   background-color: $color-deep-sky-blue;
   z-index: 10;
   border-radius: 3px;
+
 }
 
 .modal__content strong {
@@ -71,7 +74,7 @@
   padding: 16px;
   width: 100%;
   background-color: rgba($color-black-pearl, 0.15);
-  color: $color-default-white;
+  color: $color-black-pearl;
   border: none;
   border-radius: 3px;
 
@@ -90,7 +93,7 @@
   width: 100%;
   min-height: 155px;
   background-color: rgba($color-black-pearl, 0.15);
-  color: $color-default-white;
+  color: $color-black-pearl;
   border: none;
   border-radius: 3px;
 

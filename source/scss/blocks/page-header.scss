@@ -36,18 +36,20 @@
 }
 
 .page-header__contact {
+  margin-left: auto;
+  padding-top: 15px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  padding-top: 15px;
+  column-gap: 126px;
   row-gap: 15px;
-  margin-left: auto;
-  width: 453px;
+  max-width: 453px;
 
   @include vp-1023 {
-    padding-top: 10px;
-    width: 90px;
     margin-right: 14px;
+    padding-top: 10px;
+    justify-content: flex-end;
+    column-gap: 31px;
+    row-gap: 35px;
   }
 
   @include vp-769 {
@@ -82,7 +84,8 @@
   left: -36px;
 }
 
-.page-header__email {
+.page-header__email,
+.page-header__phone {
   margin-left: 29px;
 }
 

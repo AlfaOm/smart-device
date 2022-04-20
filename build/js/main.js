@@ -103,9 +103,20 @@ window.addEventListener("DOMContentLoaded", () => {
     isStorageSupport = false;
   }
 
+  // Запрет скролла контента при открытом popup
+  const disableScroll = function () {
+    document.body.classList.add("scroll-lock");
+  };
+
+  const enableScroll = function () {
+    document.body.classList.remove("scroll-lock");
+  };
+
+
   buttonFeedback.addEventListener("click", function (evt) {
     evt.preventDefault();
     modal.classList.add("modal--show");
+    disableScroll();
 
     if (storage) {
       modalLogin.value = storage;
@@ -115,11 +126,13 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
+
   modalClose.forEach((el) => {
     el.addEventListener("click", function (evt) {
       evt.preventDefault();
       modal.classList.remove("modal--show");
       modalSuccess.classList.remove("modal-success--show");
+      enableScroll();
     });
   });
 
@@ -140,10 +153,12 @@ window.addEventListener("DOMContentLoaded", () => {
       evt.preventDefault();
       if (modal.classList.contains("modal--show")) {
         modal.classList.remove("modal--show");
+        enableScroll();
       }
 
       if (modalSuccess.classList.contains("modal-success--show")) {
         modalSuccess.classList.remove("modal-success--show");
+        enableScroll();
       }
     }
   });
@@ -152,10 +167,12 @@ window.addEventListener("DOMContentLoaded", () => {
     el.addEventListener("click", function () {
       if (modal.classList.contains("modal--show")) {
         modal.classList.remove("modal--show");
+        enableScroll();
       }
 
       if (modalSuccess.classList.contains("modal-success--show")) {
         modalSuccess.classList.remove("modal-success--show");
+        enableScroll();
       }
     });
   });
