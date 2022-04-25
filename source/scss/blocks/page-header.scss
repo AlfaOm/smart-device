@@ -8,6 +8,7 @@
   z-index: 3;
 
   @include vp-1023 {
+    position: absolute;
     padding: 0;
     padding-top: 20px;
     padding-bottom: 25px;

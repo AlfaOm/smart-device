@@ -82,14 +82,26 @@
   display: flex;
   flex-wrap: wrap;
   column-gap: 25px;
+  row-gap: 15px;
+  width: 215px;
   list-style: none;
 
   @include vp-1023 {
     margin-top: 10px;
+    justify-content: flex-end;
   }
 
   @include vp-769 {
-    margin-right: 9px;
+    // margin-right: 9px;
+    margin-right: -13px;
+    justify-content: center;
+    column-gap: 0;
+  }
+}
+
+.page-footer__social-wrapper li {
+  @include vp-769 {
+    margin-right: 25px;
   }
 }
 
@@ -160,6 +172,10 @@
   @include vp-1023 {
     justify-content: start;
   }
+
+  @include vp-769 {
+    display: block;
+  }
 }
 
 .page-footer__nav-wrapper ul {
@@ -226,7 +242,7 @@
   text-transform: uppercase;
 
   @include vp-769 {
-    margin-bottom: 17px;
+    margin-bottom: 3px;
   }
 }
 
@@ -251,6 +267,7 @@
 
 .page-footer__address a {
   display: block;
+  width: 180px;
 
   &:hover,
   &:focus {
