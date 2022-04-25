@@ -102,10 +102,6 @@ window.addEventListener("DOMContentLoaded", () => {
   let modalLogin = modal.querySelector("[name=name]");
   let modalTel = modal.querySelector("[name=tel]");
 
-  // переменные для фокуса
-  let allNodes = document.querySelectorAll("*");
-  let modalOpen = false;
-  let lastFocus;
 
   let isStorageSupport = true;
   let storage = "";
@@ -130,12 +126,6 @@ window.addEventListener("DOMContentLoaded", () => {
     modal.classList.add("modal--show");
     disableScroll();
 
-    // фокус
-    lastFocus = document.activeElement;
-    modalOpen = true;
-    modal.setAttribute("tabindex", "0");
-    modal.focus();
-
     if (storage) {
       modalLogin.value = storage;
       modalTel.focus();
@@ -150,26 +140,9 @@ window.addEventListener("DOMContentLoaded", () => {
       modal.classList.remove("modal--show");
       modalSuccess.classList.remove("modal-success--show");
       enableScroll();
-
-      // фокус
-      modal.setAttribute("tabindex", "-1");
-      modalOpen = false;
-      lastFocus.focus();
     });
   });
 
-  // функция для фокуса модалки, когда открыта
-  function focusRestrict(event) {
-    if (modalOpen && !modal.contains(event.target)) {
-      event.stopPropagation();
-      modal.focus();
-    }
-  }
-
-  // для фокуса только на элементах модалки
-  for (let i = 0; i < allNodes.length; i++) {
-    allNodes.item(i).addEventListener("focus", focusRestrict);
-  }
 
   modalForm.addEventListener("submit", function (evt) {
     if (modalLogin.value || modalTel.value) {
@@ -211,6 +184,35 @@ window.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // Захват фокуса в модальном окне
+  function trapFocus(element) {
+    let focusableEls = element.querySelectorAll('input[type="text"], input[type="tel"], textarea,  input[type="checkbox"], button');
+    let firstFocusableEl = focusableEls[0];
+    let lastFocusableEl = focusableEls[focusableEls.length - 1];
+    let KEYCODE_TAB = 9;
+
+    element.addEventListener('keydown', function(e) {
+      let isTabPressed = (e.key === 'Tab' || e.keyCode === KEYCODE_TAB);
+
+      if (!isTabPressed) {
+        return;
+      }
+
+      if ( e.shiftKey ) /* shift + tab */ {
+        if (document.activeElement === firstFocusableEl) {
+          lastFocusableEl.focus();
+            e.preventDefault();
+          }
+        } else /* tab */ {
+        if (document.activeElement === lastFocusableEl) {
+          firstFocusableEl.focus();
+            e.preventDefault();
+          }
+        }
+    });
+  }
+  trapFocus(modal);
 
   // Маска для номера телефона
   [].forEach.call(

@@ -148,6 +148,9 @@
   @include vp-769 {
     display: flex;
     justify-content: space-between;
+
+    // add
+    margin-bottom: 11px;
   }
 }
 
@@ -162,6 +165,11 @@
   letter-spacing: 0.7px;
   color: $color-default-white;
   text-transform: uppercase;
+
+  @include vp-769 {
+    // add
+    position: absolute;
+  }
 }
 
 .page-footer__nav-wrapper {
@@ -242,8 +250,16 @@
   text-transform: uppercase;
 
   @include vp-769 {
+    // add
+    position: absolute;
+
     margin-bottom: 3px;
   }
+}
+
+// add
+.page-footer__address address {
+  margin-top: -9px;
 }
 
 .page-footer__address p,
