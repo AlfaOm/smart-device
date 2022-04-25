@@ -30,6 +30,7 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/date@2x.png");
+    background-size: 150px 320px;
   }
 
   @include vp-1023 {

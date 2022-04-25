@@ -83,6 +83,14 @@ window.addEventListener("DOMContentLoaded", () => {
 
   // Modal
 
+  let m = document.querySelector(".modal");
+  let p = document.querySelector(".page");
+
+  function swap() {
+    p.parentNode.insertBefore(m, p);
+  }
+  swap();
+
   let buttonFeedback = document.querySelector("[data-open-modal]");
 
   let modal = document.querySelector(".modal");
@@ -93,6 +101,11 @@ window.addEventListener("DOMContentLoaded", () => {
   let modalForm = modal.querySelector("form");
   let modalLogin = modal.querySelector("[name=name]");
   let modalTel = modal.querySelector("[name=tel]");
+
+  // переменные для фокуса
+  let allNodes = document.querySelectorAll("*");
+  let modalOpen = false;
+  let lastFocus;
 
   let isStorageSupport = true;
   let storage = "";
@@ -112,11 +125,16 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("scroll-lock");
   };
 
-
   buttonFeedback.addEventListener("click", function (evt) {
     evt.preventDefault();
     modal.classList.add("modal--show");
     disableScroll();
+
+    // фокус
+    lastFocus = document.activeElement;
+    modalOpen = true;
+    modal.setAttribute("tabindex", "0");
+    modal.focus();
 
     if (storage) {
       modalLogin.value = storage;
@@ -126,15 +144,32 @@ window.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
   modalClose.forEach((el) => {
     el.addEventListener("click", function (evt) {
       evt.preventDefault();
       modal.classList.remove("modal--show");
       modalSuccess.classList.remove("modal-success--show");
       enableScroll();
+
+      // фокус
+      modal.setAttribute("tabindex", "-1");
+      modalOpen = false;
+      lastFocus.focus();
     });
   });
+
+  // функция для фокуса модалки, когда открыта
+  function focusRestrict(event) {
+    if (modalOpen && !modal.contains(event.target)) {
+      event.stopPropagation();
+      modal.focus();
+    }
+  }
+
+  // для фокуса только на элементах модалки
+  for (let i = 0; i < allNodes.length; i++) {
+    allNodes.item(i).addEventListener("focus", focusRestrict);
+  }
 
   modalForm.addEventListener("submit", function (evt) {
     if (modalLogin.value || modalTel.value) {

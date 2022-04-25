@@ -166,6 +166,7 @@
 
 .feedback__button-checkbox {
   display: flex;
+  flex-direction: row-reverse;
   align-items: flex-end;
 
   @include vp-1023 {
@@ -173,7 +174,7 @@
   }
 
   @include vp-769 {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: flex-start;
   }
 }

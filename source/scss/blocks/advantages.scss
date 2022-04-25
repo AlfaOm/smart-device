@@ -43,17 +43,14 @@
   border: 1px solid $color-whisper;
   border-left: 5px solid $color-deep-sky-blue;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $color-deep-sky-blue;
     transition: 0.4s ease-out;
   }
+
   &:hover h3,
-  &:focus h3,
   &:hover svg,
-  &:focus svg,
-  &:hover p,
-  &:focus p {
+  &:hover p {
     color: $color-alice-blue;
     transition: 0.4s ease-out;
   }

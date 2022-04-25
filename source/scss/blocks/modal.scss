@@ -107,6 +107,11 @@
   }
 }
 
+.modal__content-button-checkbox {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .modal__content-button-checkbox label {
   position: relative;
   margin-left: 35px;

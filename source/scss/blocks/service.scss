@@ -63,13 +63,18 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 85px;
+  justify-content: space-between;
+  gap: 25px;
   list-style: none;
 
   @include vp-1023 {
-    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 30px;
+  }
+
+  @include vp-769 {
+    gap: 0;
   }
 }
 
@@ -86,6 +91,12 @@
   &:hover button,
   &:focus-within button {
     opacity: 0.5;
+  }
+
+  @include vp-769 {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -117,7 +128,7 @@
 
 .service img {
   width: 350px;
-  height: 650px;
+  max-height: 650px;
   object-fit: cover;
 
   @include vp-1023 {
