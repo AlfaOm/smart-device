@@ -1,6 +1,6 @@
 window.addEventListener("DOMContentLoaded", () => {
-  // Аккордеон в футере
 
+  // Аккордеон в футере
   const accordions = document.querySelectorAll(".accordion");
   const accordionToggle = document.querySelectorAll(".accordion__toggle");
   const accordionContents = document.querySelectorAll(".accordion__content");
@@ -52,8 +52,8 @@ window.addEventListener("DOMContentLoaded", () => {
     toggleButton.addEventListener("click", toggleAccordion);
   });
 
-  // Показать/скрыть текст блока 'О компании'
 
+  // Показать/скрыть текст блока 'О компании'
   const textHiddenDesk = document.querySelector(".about__text-desk");
   const textHiddenMob = document.querySelector(".about__text-mob");
   const aboutButton = document.querySelector(".about__button");
@@ -81,8 +81,8 @@ window.addEventListener("DOMContentLoaded", () => {
 
   aboutButton.addEventListener("click", readMore);
 
-  // Modal
 
+  // Modal
   let m = document.querySelector(".modal");
   let p = document.querySelector(".page");
 
@@ -142,7 +142,6 @@ window.addEventListener("DOMContentLoaded", () => {
       enableScroll();
     });
   });
-
 
   modalForm.addEventListener("submit", function (evt) {
     if (modalLogin.value || modalTel.value) {
@@ -213,6 +212,7 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
   trapFocus(modal);
+
 
   // Маска для номера телефона
   [].forEach.call(

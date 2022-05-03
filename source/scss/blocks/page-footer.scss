@@ -92,7 +92,6 @@
   }
 
   @include vp-769 {
-    // margin-right: 9px;
     margin-right: -13px;
     justify-content: center;
     column-gap: 0;
@@ -148,8 +147,6 @@
   @include vp-769 {
     display: flex;
     justify-content: space-between;
-
-    // add
     margin-bottom: 11px;
   }
 }
@@ -167,7 +164,6 @@
   text-transform: uppercase;
 
   @include vp-769 {
-    // add
     position: absolute;
   }
 }
@@ -250,14 +246,11 @@
   text-transform: uppercase;
 
   @include vp-769 {
-    // add
     position: absolute;
-
     margin-bottom: 3px;
   }
 }
 
-// add
 .page-footer__address address {
   margin-top: -9px;
 }
